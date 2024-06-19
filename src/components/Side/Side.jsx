@@ -10,12 +10,9 @@ import { Link } from "react-router-dom";
 
 function Side() {
   return (
-    <div className="absolute top-0">
-      <nav className="w-[20vw] h-[100vh] bg-bgBlack border-r-bgGray border-r-[1px]">
-        <div className="flex items-center justify-center pt-5 ">
-          <img src={logo} alt="" className="w-[15vw]" />
-        </div>
-        <div className="text-name ml-20 mt-20 font-poppins flex flex-col justify-center items-center gap-6">
+    <div className="relative top-0">
+      <nav className="w-[17vw] h-[100vh] bg-bgBlack border-r-bgGray border-t-bgGray border-r-[1px] border-t-[1px] ">
+        <div className="text-name ml-12 mt-14 font-poppins flex flex-col justify-center items-center gap-6">
           <Link>
             <div className="flex w-[20vw] p-3 items-center justify-start">
               <div className="flex justify-center items-center mr-7">
