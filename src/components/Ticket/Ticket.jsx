@@ -1,5 +1,7 @@
+import { faPaperclip, faUpload } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
-import "./ticket.css";
+
 const Ticket = () => {
   const [formData, setFormData] = useState({
     customer_name: "",
@@ -55,7 +57,7 @@ const Ticket = () => {
   };
 
   return (
-    <div className="bg-bgBlack max-w-full bg-bgBlack  p-1 mx-auto p-6 overflow-y-auto max-h-[90vh] ticket-scroll font-poppins">
+    <div className="bg-bgBlack max-w-full p-1 mx-auto p-6 overflow-y-auto max-h-[90vh] ticket-scroll font-poppins">
       <div className="max-w-4xl mt-5 bg-bgGray p-5 rounded-lg">
         <div>
           <p className="text-3xl mb-4 text-white">New Ticket</p>
@@ -69,7 +71,7 @@ const Ticket = () => {
                 name="customer_name"
                 value={formData.customer_name}
                 onChange={handleChange}
-                className=" w-full bg-bgBlack  p-1 border border-[#2F2F2F] rounded-md shadow-sm outline-none"
+                className="w-full bg-bgBlack p-1 border border-[#2F2F2F] rounded-md shadow-sm outline-none"
                 required
               />
             </div>
@@ -80,7 +82,7 @@ const Ticket = () => {
                 name="customer_location"
                 value={formData.customer_location}
                 onChange={handleChange}
-                className="w-full bg-bgBlack  p-1 border-[#2F2F2F] rounded-md shadow-sm outline-none  focus:border-blue-500 focus:ring-blue-500"
+                className="w-full bg-bgBlack p-1 border-[#2F2F2F] rounded-md shadow-sm outline-none focus:border-blue-500 focus:ring-blue-500"
               />
             </div>
             <div className="mb-4">
@@ -90,7 +92,7 @@ const Ticket = () => {
                 name="customer_department"
                 value={formData.customer_department}
                 onChange={handleChange}
-                className="w-full bg-bgBlack  p-1 border-[#2F2F2F] rounded-md shadow-sm outline-none  focus:border-blue-500 focus:ring-blue-500"
+                className="w-full bg-bgBlack p-1 border-[#2F2F2F] rounded-md shadow-sm outline-none focus:border-blue-500 focus:ring-blue-500"
               />
             </div>
             <div className="mb-4">
@@ -100,7 +102,7 @@ const Ticket = () => {
                 name="contact_person"
                 value={formData.contact_person}
                 onChange={handleChange}
-                className="w-full bg-bgBlack  p-1 border-[#2F2F2F] rounded-md shadow-sm outline-none  focus:border-blue-500 focus:ring-blue-500"
+                className="w-full bg-bgBlack p-1 border-[#2F2F2F] rounded-md shadow-sm outline-none focus:border-blue-500 focus:ring-blue-500"
               />
             </div>
             <div className="mb-4">
@@ -110,7 +112,7 @@ const Ticket = () => {
                 name="contact_number"
                 value={formData.contact_number}
                 onChange={handleChange}
-                className="w-full bg-bgBlack  p-1 border-[#2F2F2F] rounded-md shadow-sm outline-none  focus:border-blue-500 focus:ring-blue-500"
+                className="w-full bg-bgBlack p-1 border-[#2F2F2F] rounded-md shadow-sm outline-none focus:border-blue-500 focus:ring-blue-500"
               />
             </div>
             <div className="mb-4">
@@ -120,7 +122,7 @@ const Ticket = () => {
                 name="contact_mail"
                 value={formData.contact_mail}
                 onChange={handleChange}
-                className="w-full bg-bgBlack  p-1 border-[#2F2F2F] rounded-md shadow-sm outline-none  focus:border-blue-500 focus:ring-blue-500"
+                className="w-full bg-bgBlack p-1 border-[#2F2F2F] rounded-md shadow-sm outline-none focus:border-blue-500 focus:ring-blue-500"
                 required
               />
             </div>
@@ -130,7 +132,7 @@ const Ticket = () => {
                 name="nature_of_call"
                 value={formData.nature_of_call}
                 onChange={handleChange}
-                className="w-full bg-bgBlack  p-1 border-[#2F2F2F] rounded-md shadow-sm outline-none  focus:border-blue-500 focus:ring-blue-500"
+                className="w-full bg-bgBlack p-1 border-[#2F2F2F] rounded-md shadow-sm outline-none focus:border-blue-500 focus:ring-blue-500"
               ></input>
             </div>
             <div className="mb-4">
@@ -139,15 +141,23 @@ const Ticket = () => {
                 name="ticket_type"
                 value={formData.ticket_type}
                 onChange={handleChange}
-                className="w-full bg-bgBlack  p-1 border-[#2F2F2F] rounded-md shadow-sm outline-none  focus:border-bgGray focus:ring-bgGray"
+                className="w-full bg-bgBlack p-1 border-[#2F2F2F] rounded-md shadow-sm outline-none focus:border-bgGray focus:ring-bgGray custom-select"
               >
-                <option className="hover:bg-bgGray" value="">
+                <option value="" className="custom-option">
                   Select Ticket Type
                 </option>
-                <option value="Incident">Incident</option>
-                <option value="Request">Request</option>
-                <option value="Problem">Problem</option>
-                <option value="Change">Change</option>
+                <option value="Incident" className="custom-option">
+                  Incident
+                </option>
+                <option value="Request" className="custom-option">
+                  Request
+                </option>
+                <option value="Problem" className="custom-option">
+                  Problem
+                </option>
+                <option value="Change" className="custom-option">
+                  Change
+                </option>
               </select>
             </div>
             <div className="mb-4">
@@ -157,7 +167,7 @@ const Ticket = () => {
                 name="domain"
                 value={formData.domain}
                 onChange={handleChange}
-                className="w-full bg-bgBlack  p-1 border-[#2F2F2F] rounded-md shadow-sm outline-none  focus:border-blue-500 focus:ring-blue-500"
+                className="w-full bg-bgBlack p-1 border-[#2F2F2F] rounded-md shadow-sm outline-none focus:border-blue-500 focus:ring-blue-500"
               />
             </div>
             <div className="mb-4">
@@ -167,19 +177,9 @@ const Ticket = () => {
                 name="sub_domain"
                 value={formData.sub_domain}
                 onChange={handleChange}
-                className="w-full bg-bgBlack  p-1 border-[#2F2F2F] rounded-md shadow-sm outline-none  focus:border-blue-500 focus:ring-blue-500"
+                className="w-full bg-bgBlack p-1 border-[#2F2F2F] rounded-md shadow-sm outline-none focus:border-blue-500 focus:ring-blue-500"
               />
             </div>
-            {/* <div className="mb-4">
-              <label className="block mb-1">SLA Priority Level:</label>
-              <input
-                type="text"
-                name="sla_priority"
-                value={formData.sla_priority}
-                onChange={handleChange}
-                className="w-full bg-bgBlack  p-1 border-[#2F2F2F] rounded-md shadow-sm outline-none  focus:border-blue-500 focus:ring-blue-500"
-              />
-            </div> */}
             <div className="mb-4">
               <label className="block mb-1">
                 Nature of Issue (Description):
@@ -188,19 +188,25 @@ const Ticket = () => {
                 name="issue_nature"
                 value={formData.issue_nature}
                 onChange={handleChange}
-                className="w-full bg-bgBlack  p-1 border-[#2F2F2F] rounded-md shadow-sm outline-none  focus:border-blue-500 focus:ring-blue-500"
+                className="w-full bg-bgBlack p-1 border-[#2F2F2F] rounded-md shadow-sm outline-none focus:border-blue-500 focus:ring-blue-500"
               ></textarea>
             </div>
           </div>
           <div className="mb-4 flex justify-center items-center">
-            <label className="block mb-1">Attachment (If any):</label>
-            <input
-              type="file"
-              name="attachment"
-              value={formData.attachment}
-              onChange={handleChange}
-              className="ml-4  border-[#2F2F2F] rounded-md shadow-sm outline-none  focus:border-blue-500 focus:ring-blue-500"
-            />
+            <div className="w-[40vw] flex flex-col items-center justify-center p-5 border-gray-500 bg-bgBlack rounded-lg border-dotted border-[2px]">
+              {/* <FontAwesomeIcon icon={faPaperclip} /> */}
+              {/* <FontAwesomeIcon icon={faUpload} /> */}
+              <label className="block mb-1 text-name font-poppins">
+                Drag & Drop Your File Here
+              </label>
+              <p>OR</p>
+              <input
+                type="file"
+                name="attachment"
+                onChange={handleChange}
+                className="mt-2 ml-32 border-[#2F2F2F] rounded-md shadow-sm outline-none focus:border-blue-500 focus:ring-blue-500"
+              />
+            </div>
           </div>
           <div className="flex justify-center">
             <button
