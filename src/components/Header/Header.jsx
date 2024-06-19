@@ -15,7 +15,7 @@ function Header() {
       <div className="relative flex items-center justify-center">
         <div className="flex items-center justify-center">
           {/* Adjusting to center the image */}
-          <img src={sampatLogo} className="w-[12vw] mx-auto ml-4" alt="" />
+          <img src={sampatLogo} className="w-[12vw] mx-auto ml-6" alt="" />
         </div>
         <div className="flex absolute left-72 text-name bg-bgGray pt-2 pb-2 pl-5 pr-5 rounded-full w-[25vw] items-center justify-between">
           <input
