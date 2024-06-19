@@ -1,4 +1,5 @@
 import React from "react";
+import sampatLogo from "../../images/Login/sampatName.png";
 import {
   faBell,
   faGear,
@@ -11,7 +12,11 @@ function Header() {
   return (
     <header className="h-[10vh] bg-bgBlack w-full flex justify-between items-center">
       {/* Search Input */}
-      <div className="relative flex items-center">
+      <div className="relative flex items-center justify-center">
+        <div className="flex items-center justify-center">
+          {/* Adjusting to center the image */}
+          <img src={sampatLogo} className="w-[12vw] mx-auto ml-4" alt="" />
+        </div>
         <div className="flex absolute left-72 text-name bg-bgGray pt-2 pb-2 pl-5 pr-5 rounded-full w-[25vw] items-center justify-between">
           <input
             type="text"
@@ -23,20 +28,20 @@ function Header() {
       </div>
 
       {/* Icons for Settings, Notifications, and User */}
-      <div className="text-white flex gap-7 mr-10">
+      <div className="text-white flex gap-5 mr-10">
         {/* Settings */}
-        <div>
+        <div className="w-8 h-8 bg-bgGray rounded-full flex items-center justify-center">
           <FontAwesomeIcon icon={faGear} className="text-flo" />
         </div>
         {/* Notifications */}
-        <div className="relative text-flo">
+        <div className="relative text-flo w-8 h-8 bg-bgGray rounded-full flex items-center justify-center">
           <FontAwesomeIcon icon={faBell} />
-          <p className="absolute -top-2 -right-2 bg-flo text-black rounded-full w-4 h-4 flex items-center justify-center text-xs">
+          <p className="absolute -top-1 -right-1 bg-flo text-black rounded-full w-4 h-4 flex items-center justify-center text-sm">
             3
           </p>
         </div>
         {/* User */}
-        <div>
+        <div className="w-8 h-8 bg-bgGray rounded-full flex items-center justify-center">
           <FontAwesomeIcon icon={faUser} className="text-flo" />
         </div>
       </div>

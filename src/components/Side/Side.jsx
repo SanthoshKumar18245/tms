@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../images/Side/sampatName.png";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faChartSimple,
@@ -18,7 +18,7 @@ function Side() {
               <div className="flex justify-center items-center mr-7">
                 <FontAwesomeIcon icon={faHouse} className="text-xl" />
               </div>
-              <div className="text-xl">Dashboard</div>
+              <div className="text-lg">Dashboard</div>
             </div>
           </Link>
           <Link>
@@ -26,7 +26,7 @@ function Side() {
               <div className="flex justify-center items-center mr-7">
                 <FontAwesomeIcon icon={faListCheck} className="text-xl" />
               </div>
-              <div className="text-xl">New Tickets</div>
+              <div className="text-lg">New Tickets</div>
             </div>
           </Link>
           <Link to="/analytics">
@@ -36,7 +36,7 @@ function Side() {
               <div className="flex justify-center items-center mr-7">
                 <FontAwesomeIcon icon={faChartSimple} className="text-xl" />
               </div>
-              <div className="text-[2vw]">Analytics</div>
+              <div className="text-lg">Analytics</div>
             </div>
           </Link>
         </div>
