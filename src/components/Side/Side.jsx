@@ -11,10 +11,10 @@ import { Link } from "react-router-dom";
 function Side() {
   return (
     <div className="relative top-0">
-      <nav className="w-[17vw] h-[100vh] bg-bgBlack border-r-bgGray border-t-bgGray border-r-[1px] border-t-[1px] ">
-        <div className="text-name ml-16 mt-14 font-poppins flex flex-col justify-center items-center gap-6">
+      <nav className="w-[17vw] h-full bg-bgBlack border-r-bgGray border-b-bgGray border-t-bgGray border-r-[1px] border-t-[1px] border-b-[1px] ">
+        <div className="text-name  mt-14 font-poppins flex flex-col justify-center items-center gap-6">
           <Link>
-            <div className="flex w-[20vw] p-3 items-center justify-start">
+            <div className="flex w-[15vw] rounded-lg p-3 items-center justify-center">
               <div className="flex justify-center items-center mr-7">
                 <FontAwesomeIcon icon={faHouse} className="text-xl" />
               </div>
@@ -22,7 +22,7 @@ function Side() {
             </div>
           </Link>
           <Link>
-            <div className="flex w-[20vw] p-3 items-center justify-start">
+            <div className="flex w-[15vw] bg-bgGray p-3 items-center justify-center rounded-lg">
               <div className="flex justify-center items-center mr-7">
                 <FontAwesomeIcon icon={faListCheck} className="text-xl" />
               </div>
@@ -30,10 +30,10 @@ function Side() {
             </div>
           </Link>
           <Link to="/analytics">
-            <div className="flex w-[20vw] p-3 items-center justify-start">
+            <div className="flex w-[15vw] p-3 items-center justify-center rounded-lg">
               {" "}
               {/* Replace "/analytics" with your desired route */}
-              <div className="flex justify-center items-center mr-7">
+              <div className="flex justify-center items-center mr-8">
                 <FontAwesomeIcon icon={faChartSimple} className="text-xl" />
               </div>
               <div className="text-lg">Analytics</div>

@@ -10,7 +10,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Header() {
   return (
-    <header className="h-[10vh] bg-bgBlack w-full flex justify-between items-center">
+    <header
+      className="h-[10vh] bg-bgBlack w-full flex justify-between items-center border-b-[1px]
+    border-bgGray"
+    >
       {/* Search Input */}
       <div className="relative flex items-center justify-center">
         <div className="flex items-center justify-center">
