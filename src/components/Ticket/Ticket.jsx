@@ -57,8 +57,8 @@ const Ticket = () => {
   };
 
   return (
-    <div className="bg-bgBlack max-w-full p-1 mx-auto p-6 overflow-y-auto max-h-[90vh] ticket-scroll font-poppins">
-      <div className="max-w-4xl mt-5 bg-bgGray p-5 rounded-lg">
+    <div className="bg-bgBlack max-w-full mx-auto p-6 overflow-y-auto max-h-[90vh] ticket-scroll font-poppins">
+      <div className="max-w-5xl mt-5 bg-bgGray p-5 rounded-lg">
         <div>
           <p className="text-3xl mb-4 text-white">New Ticket</p>
         </div>
